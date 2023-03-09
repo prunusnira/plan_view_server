@@ -12,6 +12,13 @@ const resolvers = {
         userList: () => dataSetUser,
         itemList: () => dataSetItem,
     },
+    OrderList: {
+        item: (obj) => {
+            return obj.item.map((id) => {
+                return dataSetItem.find((item) => item.id === id);
+            });
+        },
+    },
 };
 
 (async () => {

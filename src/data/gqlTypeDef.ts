@@ -21,7 +21,7 @@ export const typeDefs = gql`
         category: String
         name: String
         price: Int
-        image: String
+        image: [String]
         amount: Int
     }
 
